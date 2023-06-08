@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="mSignal Application Test Automation Test Suite">
+
+	<listeners>
+		<listener class-name="com.mSignal.ExtentReportListener.ExtentReporterNG" />
+		<listener class-name="com.mSignal.Analyzer.RetryRunTimeTransform" />
+	</listeners>
+	
+	<test name="mSignal App Test Cases">
+		<classes>
+			<class name="com.mSignal.testcases.LoginPageTest"></class>
+			<class name="com.mSignal.testcases.HomePageTest"></class>
+			<class name="com.mSignal.testcases.ProjectListTest"></class>
+
+		</classes>
+	</test>
+</suite>
