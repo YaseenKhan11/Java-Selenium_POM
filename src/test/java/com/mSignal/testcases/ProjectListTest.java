@@ -19,19 +19,19 @@ import com.mSignal.Analyzer.RetryAnalyzer;
 
 public class ProjectListTest extends TestBase {
 
-	LoginPage loginPage; 
-	HomePage homepage; 
+	LoginPage loginPage;
+	HomePage homepage;
 	ProjectListPage projectListPage;
 	CreateProjectPage createProjectPage;
 	TestUtil testUtil;
-	
+
 	String sheetName = "CreateProject";
 	Logger log = Logger.getLogger(ProjectListTest.class);
-	
+
 	public ProjectListTest() {
-		super(); 	
+		super();
 	}
-		
+
 	@BeforeMethod
 	public void setup() {
 		initialization();
@@ -41,23 +41,24 @@ public class ProjectListTest extends TestBase {
 		homepage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		projectListPage = homepage.clickOnPanelProjectLink();
 		log.info("Successful with Initialization step");
-		
+
 	}
 
-	/*
-	 * // @Test(retryAnalyzer = com.mSignal.Analyzer.RetryAnalyzer.class)
-	 * 
-	 * @Test (priority = 1) public void verifyProjectPageTab() {
-	 * Assert.assertTrue(projectListPage.verifyProjectListTab(),
-	 * "ProjectList tab missing on the page"); }
-	 * 
-	 * @Test (priority = 2) public void VerifyProjectID() {
-	 * projectListPage.SelectProject();
-	 * 
-	 * }
-	 */	
-	@Test (priority = 3)
-	public void verifyCreateProjectBtnClick() throws InterruptedException {
+	// @Test(retryAnalyzer = com.mSignal.Analyzer.RetryAnalyzer.class)
+
+	@Test(priority = 1)
+	public void verifyProjectPageTab() {
+		Assert.assertTrue(projectListPage.verifyProjectListTab(), "ProjectList tab missing on the page");
+	}
+
+	@Test(priority = 2)
+	public void VerifyProjectID() {
+		projectListPage.SelectProject();
+
+	}
+
+	@Test(priority = 3)
+	public void verifyCreateProjectBtnClick() {
 		projectListPage.clickOnCreateProjectBtn();
 		createProjectPage.newProjectsTextDisplay();
 		createProjectPage.selectDrugDP();
@@ -67,20 +68,22 @@ public class ProjectListTest extends TestBase {
 		createProjectPage.DisproportionalityAnalysis();
 		createProjectPage.PrioritizationThreshold();
 		createProjectPage.clickOnCreateBtn();
-		
+		projectListPage.ProductNamedisplayed();
+		projectListPage.EventNamedisplayed();
 		log.info("********** Successfully Create the New Project *************");
+
 //		log.info("Entering Application URL");
 //		log.warn("This is just a warning message");
 //		log.fatal("This is just a fatal error message");
 //		log.debug("this is just debug message");
 	}
-	
-	@DataProvider
-	public Object[][] getmSignalTestData() {
-		Object 	data[][] = testUtil.getTestData(sheetName);
-		return data;
-	}
-	
+
+//	@DataProvider
+//	public Object[][] getmSignalTestData() {
+//		Object data[][] = testUtil.getTestData(sheetName);
+//		return data;
+//	}
+
 //	@Test (priority = 4, dataProvider = "getmSignalTestData")
 //	public void updateFieldsOnCreateProject(String drugs, String events, String ss) {
 //		projectListPage.clickOnCreateProjectBtn();
@@ -89,9 +92,9 @@ public class ProjectListTest extends TestBase {
 //		//createProjectPage.selectDomainDP();
 //		createProjectPage.verifyUpdateDrugEvent(drugs, events, ss);
 //	}
-	
+
 	@AfterMethod
-	public void teardown(){
+	public void teardown() {
 		driver.quit();
 		log.info("Successfully LoggedOut");
 	}

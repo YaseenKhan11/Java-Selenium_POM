@@ -32,10 +32,14 @@ public class CreateProjectPage extends TestBase {
 	@FindBy(xpath = "//*[@id='timeperiod']/..")
 	WebElement StartDate;
 	
+	@FindBy(xpath = "//input[@placeholder='Start date']")
+	WebElement StartDateTwo;
+	
+	@FindBy(xpath = "//input[@id='timeperiod' and @placeholder='Start date']")
+	WebElement StartDateThree;
+	
 	@FindBy(xpath = "//table/tbody/tr/td[@class='ant-picker-cell ant-picker-cell-in-view ant-picker-cell-range-start ant-picker-cell-range-start-single ant-picker-cell-selected']")
 	WebElement StartDateHighlight;
-	
-	
 	
 	@FindBy(xpath = "//input[@placeholder='End date']")
 	WebElement EndDate;
@@ -60,9 +64,7 @@ public class CreateProjectPage extends TestBase {
 	
 	@FindBy(xpath="//input[@placeholder='End date']/..")
 	WebElement timeEndBtn;
-	
-	
-	
+		
 	
 	// initializing the Page Objects
 	public CreateProjectPage() {
@@ -87,69 +89,44 @@ public class CreateProjectPage extends TestBase {
 	public void selectDrugDP() {
 		SelectDrug.sendKeys("OXYCODONE");
 		SelectDrugStepTwo.click();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	public void selectEventInput() {
 		SelectEvent.sendKeys("Pain");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	public void SelectMeddraInput() {
 		SelectMeddra.sendKeys("PT");
 		SelectMeddraStepTwo.click();		
+	}
+		
+	public void selectStartDateField() {
+		StartDate.click();
+		StartDateTwo.sendKeys("08-Jun-2015");
+		StartDateHighlight.click();
+		EndDate.sendKeys("13-May-2023"); 
+		EndDate.sendKeys(Keys.ENTER);
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-	
-	public void selectStartDateField() throws InterruptedException {
-		StartDate.click();
-		Thread.sleep(2000);
-		StartDate.sendKeys("08-Jun-2015");
-		Thread.sleep(3000);
-		StartDate.sendKeys(Keys.ENTER);
-		Thread.sleep(3000);
 	}
 	
 	public void DisproportionalityAnalysis() {
 		DisproportionalityAnalysisInput.click();
 		DisproportionalityAnalysisInputStepTwo.click();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	public void PrioritizationThreshold() {
 		PrioritizationThresholdInput.sendKeys("1");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	public ProjectListPage clickOnCreateBtn() {
 		CreateBtn.click();
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

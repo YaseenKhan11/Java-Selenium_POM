@@ -18,6 +18,12 @@ public class ProjectListPage extends TestBase {
 	
 	@FindBy(xpath = "//table//tbody/tr[1]/td[1]")
 	WebElement SelectProjectInTable;
+	
+	@FindBy(xpath = "//table/tbody/tr/td[3][text()='Oxycodone']")
+	WebElement ProductName;
+	
+	@FindBy(xpath = "//table/tbody/tr/td[4][text()='Pain']")
+	WebElement EventName;
 
 	// initializing the Page Objects
 	public ProjectListPage() {
@@ -54,6 +60,13 @@ public class ProjectListPage extends TestBase {
 			e.printStackTrace();
 		}
 	}
+		
+	public boolean ProductNamedisplayed() {
+		return ProductName.isDisplayed();
+	}
 	
+	public boolean EventNamedisplayed() {
+		return EventName.isDisplayed();
+	}
 	
 }

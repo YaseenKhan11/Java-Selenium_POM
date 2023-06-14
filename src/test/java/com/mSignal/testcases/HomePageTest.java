@@ -24,7 +24,7 @@ public class HomePageTest extends TestBase {
 		super(); // to initialize the ‘TestBase’ class for Constructor (Properties()). This will
 					// call Super class constructor // creating Super class constructor
 	}
-
+	
 	@BeforeMethod
 	public void setup() {
 		initialization();

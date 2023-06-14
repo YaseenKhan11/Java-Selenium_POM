@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 public class RetryAnalyzer implements IRetryAnalyzer{
 
 	int counter = 0;
-	int retrylimit = 0; // Change to num_3  // for Retry mode test run
+	int retrylimit = 3; // Change to num_3  // for Retry mode test run
 	
 	public boolean retry (ITestResult result) {
 		if (counter < retrylimit) {
@@ -15,5 +15,4 @@ public class RetryAnalyzer implements IRetryAnalyzer{
 		}
 		return false;
 	}
-	
 }

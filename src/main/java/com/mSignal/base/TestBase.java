@@ -68,7 +68,8 @@ public class TestBase {
 			driver = new FirefoxDriver(); 
 		}
 		
-		// to generate the Logs in good manner
+		// Uncomment to below method to open/capture the console logs --> util/WebEventListner.java
+		// to generate the Logs in good manner // Not using Log4j here
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver
 		eventListener = new WebEventListener();
@@ -81,6 +82,6 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));
-		
+	
 	}
 }

@@ -1,12 +1,7 @@
-2023-06-08 17:26:10,593  INFO [main] ProjectListTest:43 - Successful with Initialization step
-2023-06-08 17:26:20,534  INFO [main] ProjectListTest:96 - Successfully LoggedOut
-2023-06-08 17:26:20,766 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2023-06-08 17:26:20,767 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
-2023-06-08 17:26:20,770 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-2023-06-08 17:26:20,771 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-2023-06-08 17:26:20,772 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Admin/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
-2023-06-08 17:26:21,061 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2023-06-08 17:26:21,062 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
-2023-06-08 17:26:21,062 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-2023-06-08 17:26:21,063 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-2023-06-08 17:26:21,063 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Admin/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-06-13 20:10:56,784  INFO [main] ProjectListTest:43 - Successful with Initialization step
+2023-06-13 20:10:57,530  INFO [main] ProjectListTest:99 - Successfully LoggedOut
+2023-06-13 20:11:08,984  INFO [main] ProjectListTest:43 - Successful with Initialization step
+2023-06-13 20:11:16,423  INFO [main] ProjectListTest:99 - Successfully LoggedOut
+2023-06-13 20:11:31,506  INFO [main] ProjectListTest:43 - Successful with Initialization step
+2023-06-13 20:11:44,125  INFO [main] ProjectListTest:73 - ********** Successfully Create the New Project *************
+2023-06-13 20:11:44,845  INFO [main] ProjectListTest:99 - Successfully LoggedOut

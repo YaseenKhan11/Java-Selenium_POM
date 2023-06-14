@@ -50,8 +50,4 @@ public class HomePage extends TestBase {
 		panelSignalsLink.click();
 		return new SignalsPage();
 	}
-	
-	
-	
-	
 }
